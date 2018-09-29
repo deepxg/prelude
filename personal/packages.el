@@ -1,1 +1,1 @@
-(prelude-require-packages '(paredit aggressive-indent cider))
+(prelude-require-packages '(paredit aggressive-indent cider exec-path-from-shell))
