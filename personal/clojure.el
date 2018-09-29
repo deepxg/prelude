@@ -4,6 +4,7 @@
 (setq cider-repl-history-file "~/.repl-history")
 
 (add-hook 'clojure-mode-hook 'aggressive-indent-mode)
+(add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'cider-mode-hook
           (lambda ()
             (add-hook 'after-save-hook
@@ -13,5 +14,5 @@
                           (cider-test-run-loaded-tests)))
                       nil t)))
 
-(if (string-equal system-type "windows-nt")
+(when (string-equal system-type "windows-nt")
     (setq cider-lein-command "lein.bat"))
