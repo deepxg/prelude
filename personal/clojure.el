@@ -14,6 +14,3 @@
                           (cider-load-buffer)
                           (cider-test-run-loaded-tests nil)))
                       nil t)))
-
-(when (string-equal system-type "windows-nt")
-    (setq cider-lein-command "lein.bat"))
